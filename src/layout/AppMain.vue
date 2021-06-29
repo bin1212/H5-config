@@ -1,16 +1,14 @@
 <template>
-  <div class="layout">
-    <fix-header></fix-header>
-    <app-main></app-main>
-  </div>
+  <section class="app-main">
+    <router-view></router-view>
+  </section>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import AppMain from './AppMain.vue'
 import FixHeader from './FixHeader.vue'
 export default defineComponent({
-  components: { FixHeader, AppMain },
+  components: { FixHeader },
   name:"layout",
   setup() {
     
@@ -18,7 +16,7 @@ export default defineComponent({
 })
 </script>
 <style lang="scss">
-.layout{
-  height: 100%;
+.app-main{
+  padding-top: 64px;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  cofigCenter
+  <div>cofigCenter</div>
 </template>
 
 <script lang="ts">

@@ -1,17 +1,18 @@
 import * as vueRouter from 'vue-router';
+import Layout from '@/layout/index.vue'
 
-export const constantRoutes = [{
+export const constantRoutes:Array<vueRouter.RouteRecordRaw> = [{
   path: '/',
+  component: Layout,
+  name:"config-layout",
   redirect: '/config-center',
-  component: () => import('../views/config-center.vue'),
   children: [{
     path: 'config-center',
     name: 'config-center',
     meta: {
       title: '首页',
-      icon: 'config-center'
     },
-    component: () => import('../views/config-center.vue')
+    component: () => import('@/views/config-center/index.vue')
   }],
 },
 // {
@@ -27,4 +28,5 @@ const createRouter = () => vueRouter.createRouter({
 });
 
 const router = createRouter()
+
 export default router

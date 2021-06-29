@@ -3,32 +3,29 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'App',
-  data(){
+  name: "App",
+  data() {
     return {
-      msg:'Hello Vue 3 + TypeScript + Vite'
-    }
+    };
   },
-  components: {
+  components: {},
+  created() {
   },
-  created(){
-    setTimeout(()=>{
-      this.msg = 'dsasdas'
-    },2000)
-  }
-})
+});
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+* {
+  margin: 0;
+  padding: 0;
+}
+html,body{
+  height: 100%;
+}
+#app{
+  height: 100%;
 }
 </style>
